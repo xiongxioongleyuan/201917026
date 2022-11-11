@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="styleSheet" href="../CSSfile/Style.css">
+    <link rel="stylesheet" href="../js/js.js">
+    <style>
+        .input_user,
+        .input_psw {
+            border: 1px solid yellow;
+            height: 50px;
+            line-height: 50px;
+            height: 50px;
+            width: 80%;
+            color: white;
+            margin: 20px auto;
+            border-radius: 10px;
+            font-weight: 100;
+        }
+
+        body{
+            background-color: #C50206;
+        }
+        input {
+            border: none;
+            outline: none;
+            margin-left: 10px;
+        }
+
+        .main_section span {
+            margin-left: 15px;
+            font-weight: 600;
+        }
+
+        .input_but {
+            height: 50px;
+            line-height: 50px;
+            height: 50px;
+            width: 80%;
+            margin: 20px auto;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 500;
+            font-size: 20px;
+            border: none;
+            background-color: #E43228;
+        }
+
+        .input_but button {
+            background-color: #E43228;
+            color: white;
+            font-weight: 500;
+            font-size: 20px;
+            border: none;
+        }
+
+        .sec_left {
+            float: left;
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <a href="./home page.html">
+                <img class="sec_left" src="../切图/形状-7-拷贝-5@2x.png" alt="">
+            </a>
+
+        </div>
+        <span style="font-size: 25px;">登录</span>
+
+
+    </header>
+    <section class="main_section">
+        <div class="input_user">
+            <span>身份证号:</span>
+             <input type="text" id="user">
+        </div>
+        <div class="input_psw">
+            <span>&#12288;&#12288;密码:</span>
+            <input type="password" id="pwd">
+        </div>
+        <div  class="login_div">
+            <button id="btn">登录<button> 
+        </div>
+     <section>
+
+</body>
+
+</html>
+<script>
+    //1.当用户点击登录页面后，js部分需要知道用户的点击行为发生（点击事件）
+    //进行接下的处理
+    var btn = document.getElementById("btn");
+    console.log(btn);
+    //给元素添加点击事件
+    btn.onclick = function(){
+        // 信息提交 确认登陆
+        // 首先：获取用户信息 - DOM
+        var  user = document.getElementById("user").value;
+        var  pwd = document.getElementById("pwd").value;
+        //将用户信息提交给后台 - 后台从数据库中查询到注册的信息
+        //之后通过代码比较是否正确/有无注册 - 之后将对应信息返回给前端
+        //前端根据后端信息做出对应的正确操作
+        var par = "username=" + user + "&pwd="+ pwd;
+        requestData("post","login",par,function(res){
+            //拿到登录状态码
+            var code = res.code;
+            //如何为1，证明成功
+            if(code == 1){
+                // 跳转到首页 - href
+                // BOM
+                location.href = "home page.html"
+            }else{
+                //提示用户账号/密码出错 - 查到信息（请先注册，直接跳转注册）
+                //BOM - 浏览器
+                alert("账号密码错误，请重新输入！");
+            }
+        })
+    }
+</script>

@@ -1,0 +1,60 @@
+header {
+    background-color: #C50206;
+    text-align: center;
+    color: white;
+    line-height: 44px;
+    font-size: larger;
+    /* 固定定位法 - 以 上 右 下 左 为基准点进行定位 - 脱离文档流 */
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; */
+    /* 粘性定位  - 不脱离*/
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+}
+
+
+
+section div {
+
+    padding-top: 10px;
+}
+
+.main_section div p {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.main_section div img {
+    width: 100%;
+}
+
+.main_section div .main_p {
+    color: #8D8D8D;
+    font-size: 14px;
+    padding: 0 15px;
+    text-align: left;
+    line-height: 30px;
+}
+
+.main_section div .main_p1 {
+    text-align: center;
+    color: #8D8D8D;
+    font-size: 14px;
+    padding: 0 15px;
+    line-height: 30px;
+
+}

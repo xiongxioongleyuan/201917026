@@ -1,0 +1,23 @@
+footer{
+    display: table;
+    box-sizing: border-box;
+    border:2px solid rgb(154, 149, 149);
+    width: 100%;
+    font-size: 12px;
+    margin-top: 10px;
+}
+a{
+    text-decoration: none;
+}
+footer a{
+    color: rgb(159, 167, 171);
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    padding-bottom: 10px;
+}
+footer img{
+    width: 20px;
+    height: 20px;
+    padding-top: 10px;
+}

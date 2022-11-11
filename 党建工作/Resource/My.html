@@ -1,0 +1,120 @@
+<!-- html5标准网页声明，这是简写方式，支持html5标准的主流浏览器都认识，...-->
+<!DOCTYPE html>
+<!--网页的第一个标签，以下的标签都是超文本标记语言
+    lang: languag en表示： english
+-->
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <!--
+        适配浏览器 IE
+        简单说： 例如使用IE9，那么就算兼模式下切换适用IE7，仍然是以IE9的样子
+        进行页面渲染
+    -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 设置成手机模式 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,users-scaleable-no">
+    <title>党建项目</title>
+
+    <link rel="styleSheet" href="../CSSfile/footer.css">
+    <link rel="stylesheet" href="../CSSfile/Style.css">
+    <style>
+        .second_section {
+            /* //必须设置父类为相对定位 */
+            position: relative;
+        }
+
+        .second_section div {
+            position: absolute;
+            left: 50%;
+            margin-left: -35px;
+            top: 50%;
+            margin-top: -60px;
+            text-align: center;
+            line-height: 25px;
+        }
+
+        .main_section {
+            /* 设置边框：宽度 */
+            border: 1px solid rgb(221, 221, 221);
+            background-color: white;
+            /* 定宽居中布局方式 */
+            width: 100%;
+            line-height: 100px;
+        }
+
+        .right_img {
+            /* 浮动 - 到右侧 
+            特点 ：浮动元素脱离了文档流，但是不会脱离文档流的一种布局结构
+            通过浮动可以让元素在水平上左右移动
+        */
+            float: right;
+            margin-right: 15px;
+            margin-top: 50px;
+        }
+
+        .left_img {
+            float: left;
+            margin-right: 15px;
+            margin-top: 30px;
+        }
+        .header_2{
+            outline: 1px solid grey;
+            
+        }
+        .header_div1{
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <p class="header_2">我的党建</p>
+        
+        <div class="header_div1">
+            <img src="../切图/头像@2x.png" alt="">
+            <p>马上登录，获取更多党建咨询</p>
+        </div>
+    </header>
+    <!--页面导航部分 -->
+
+
+    <!-- 主内容区域 -->
+    <section class="main_section">
+        <img class="left_img" src="../切图/个人信息@2x.png" alt="">
+        <span>个人信息</span>
+        <img class="right_img" src="../切图/形状-7-拷贝-5@2x(1).png" alt="">
+    </section>
+    <section class="main_section">
+        <img class="left_img" src="../切图/量化积分icon@2x.png" alt="">
+        <span>个人量化积分</span>
+        <img class="right_img" src="../切图/形状-7-拷贝-5@2x(1).png" alt="">
+    </section>
+    <section class="main_section">
+        <img class="left_img" src="../切图/修改密码icon@2x.png" alt="">
+        <span>修改密码</span>
+        <img class="right_img" src="../切图/形状-7-拷贝-5@2x(1).png" alt="">
+    </section>
+
+    </section>
+    <!-- 第四部分 -->
+    <footer>
+        <a href="home page.html" style="width: 33%;">
+            <img src="../切图/党_grey.png">
+            <p>首页</p>
+        </a>
+        <a href="Notice.html" style="width: 33%;">
+            <img src="../切图/消息_grey.png">
+            <p>通知早知道</p>
+        </a>
+        <a href="My.html" style="width: 34%;">
+            <img src="../切图/会员_red.png">
+            <p style="color: red;">我的党建</p>
+        </a>
+    </footer>
+</body>
+
+</html>
